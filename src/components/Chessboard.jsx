@@ -5,7 +5,7 @@ const Chessboard = () => {
   const [selectedBox, setSelectedBox] = useState(null);
 
   const handleBoxClick = (row, col) => {
-    console.log(row, col);
+    console.log(row, col,);
     setSelectedBox({ row, col });
   };
 
@@ -33,9 +33,8 @@ const Chessboard = () => {
         return (
           <div
             key={index}
-            className={`w-full h-full cursor-pointer ${boxColor} ${
-              isHighlighted ? 'bg-blue-400' : ''
-            }`}
+            className={`w-full h-full cursor-pointer ${boxColor} `}
+            style={{ backgroundColor: isHighlighted ? '#4469d1' : ''}}
             onClick={() => handleBoxClick(row, col)}
           ></div>
         );
